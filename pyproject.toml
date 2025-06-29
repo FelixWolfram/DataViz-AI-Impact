@@ -1,0 +1,28 @@
+[project]
+name = "ai-dataset"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Felix Wolfram",email = "159858839+FelixWolfram@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas (>=2.3.0,<3.0.0)",
+    "matplotlib (>=3.10.3,<4.0.0)",
+    "dash (>=3.0.4,<4.0.0)",
+    "nbformat (>=5.10.4,<6.0.0)",
+    "pycountry (>=24.6.1,<25.0.0)",
+    "dash-bootstrap-components (>=2.0.3,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "ai_dataset", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
