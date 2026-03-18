@@ -1,8 +1,9 @@
-**Data Visualization Documentation – Impact of AI on Digital Media (2020-2025)**
-1. # **Formulating your Brief**
+# **Data Visualization Documentation – Impact of AI on Digital Media (2020-2025)**
+
+# 1.  **Formulating your Brief**
 Das Projekt existiert als Prüfungsleistung im Fach Data Visualization im 2. Semester des Studiengangs *Wirtschaftsinformatik – Data Science* an der DHBW Stuttgart. Es handelt sich um eine bewertete, praktische Prüfungsleistung und lässt sich damit als ein Freizeitprojekt einordnen. Die Idee zum Projekt entstand aus der hohen Aktualität des Themas Künstliche Intelligenz in der Gesellschaft und Wirtschaft, wobei die Diskussion um Nutzen, Risiken und Regulierung nimmt hierbei kontinuierlich zunimmt. Als Datengrundlage wurde ein aktueller und relevanter Datensatz von Kaggle zu diesem Thema ausgewählt, wobei dieser die primäre Nutzung und Auswirkungen im Business-Bereichs abdeckt. Ziel des Projekts ist es, die globale Entwicklung der KI-Nutzung visuell aufzubereiten und dabei auch Auswirkungen und Regulierungsmaßnahmen in verschiedenen Ländern aufzuzeigen. Es kommen sowohl erklärende (Explanatory), als auch erforschende (Exploratory) und darstellende (Exhibitory) Visualisierungen zum Einsatz, die dem Nutzer sowohl Informationen bereitstellen als auch die Möglichkeit geben sollen, sich selbst einen Überblick zu schaffen und Zusammenhänge zu entdecken. Die Zielgruppe ist primär Dozent und Aufgabensteller Florian Eichin, richtet sich jedoch ebenfalls an die Öffentlichkeit, welche bei Interesse an der Thematik diese Virtualisierung ebenfalls nutzen kann. Das Projekt wurde als interaktive Web-Anwendung mit dem Framework Dash in Python umgesetzt. Da das Projekt als Einzelprojekt konzipiert ist, ist keine laufende Weiterentwicklung geplant. Die verschiedenen Virtualisierungen samt deren Erläuterungen können im Abschnitt *IV. Develop the Design Solution* aufgefunden werden.
 
-1. # **Working with the Data**
+# 2. **Working with the Data**
 Der verwendete Datensatz ist öffentlich über Kaggle verfügbar. Er umfasst verschiedene KI-bezogene Kennzahlen für die Jahre 2020 bis 2025, unterteilt in Land und Industrie. Diese Metriken lassen sich unterteilen in qualitative und quantitative Daten.
 
 Quantitative Daten umfassen alle Metriken wie *AI Adoption Rate*, *AI-Generated Content Volume*, *Job Loss due to AI*, *Revenue Increase due to AI*, *Human-AI Collaboration Rate*, *Consumer Trust in AI* und *Market Share of AI Companies*. 
@@ -13,13 +14,13 @@ Zu den qualitativen Daten gehören neben den nominalen Werten wie *Country*, *In
 
 Das Modul „overview\_over\_dataset.ipynb“ bietet einen ersten Überblick über die Daten des Datensatzes. Dieses gibt etwa Einblick in die Struktur (Spaltennamen, Anzahl Zeilen) sowie einfache statistische Kennzahlen. Obwohl der Datensatz bereits als „bereinigt“ galt, wurde dieser dennoch auf Nullwerte und Ausreißern überprüft. Diese waren in dem Datensatz jedoch jeweils nicht vorhanden.
 
-1. # **Establish Editorial Thinking**
+# 3. **Establish Editorial Thinking**
 Durch die Visualisierungen soll der Nutzer ein klares Verständnis für die Entwicklung der KI-Nutzung und deren Folgen erhalten. Im Fokus steht dabei die Betrachtung auf Länderebene. Der Nutzer bekommt für jedes Land durch verschiedene Kennzahlen und den Regulierungsstatus eine klare Übersicht über die KI-Struktur. Darüber hinaus lassen sich Zusammenhänge zwischen den Metriken leicht erkennen und vergleichen. 
 
 Neben diesen länderspezifischen Ansichten soll das Dashboard auch einen Eindruck der globalen Trends und Auswirkungen der KI-Nutzung vermitteln. Diese globalen Virtualisierungen zu Darstellung der globalen Struktur sind dabei durch verschiedenste Einstellungs- und Filterungsmöglichkeiten explorativer gestaltet, damit der Nutzer selbst nach eigenem Interesse und Fokus einen Überblick über Zusammenhänge und Auswirkungen der KI-Nutzung erforschen kann. Eine Virtualisierung der globalen, zeitlichen Entwicklung soll unter anderem die Möglichkeit bieten, globale mit länderspezifischen Entwicklungen zu vergleichen. Alles soll dabei für den Nutzer übersichtlich auf einem Dashboard bereitgestellt werden, mit welchem dieser interagieren und navigieren kann.
 
 Zusammengefasst ist das Ziel also eine übersichtliche, aber umfangreiche Darstellung der globalen als auch länderspezifische Situation bezüglich der KI-Entwicklung mit einhergehenden Folgen.
-1. # **Develop the Design Solution**
+# 4. **Develop the Design Solution**
 Im Folgenden werden die Designentscheidungen für die verschiedenen Elemente des Dashboards genauer erläutern. Das Design des Dashboards ist grundsätzlich in dunkleren Farbtönen gestaltet. Vor diesem Hintergrund heben sich hellere Elemente wie Texte, Linien und Grafiken deutlich ab, was die Lesbarkeit erhöht. 
 
 Um den Nutzer beim Starten der Anwendung nicht mit Informationen überfluten, werden bei Start der Anwendung werden zunächst lediglich drei Kernvisualisierungen angezeigt. Detaillierte Analysen zu einzelnen Ländern können mit einem Klick auf ein Land in der Choropleth-Map angezeigt werden. Dies ermöglicht dem Nutzer einen schnellen Überblick und bietet gleichzeitig die Möglichkeit, nach individuellem Interesse tiefer in die Daten einzutauchen. Um die Applikation zu starten ist es nötig, die Datei „dashboard\_ai\_media.py“ auszuführen und auf den Link im Terminal zu klicken. Auf die einzelnen Visualisierungen und die Gedanken zu diesen wird im Folgenden genauer eingegangen. 
